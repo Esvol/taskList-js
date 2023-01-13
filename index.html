@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            position: relative;
+            background-image: url(https://img.freepik.com/premium-photo/the-texture-of-a-black-blank-page-tablet-for-pastels-black-background-of-paper-texture_94046-3474.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+            all: unset;
+            display: revert;
+        }
+
+        .planshet{
+            width: 50px;
+            height: 500px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            background-image: url(targus-Антимикробный-ipad-digital-Ручка-removebg-preview.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input[name="text"]{
+            height: 35px;
+            font-size: 20px;
+            width: 300px;
+            border-bottom: 2px solid black;
+        }
+
+        .container{
+            position: relative;
+            width: 1200px;
+            height: 700px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;   
+        }
+
+        .left-container{
+            height: 700px;
+            width: 595px;
+            background-color: white;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding-left: 40px;
+            padding-top: 25px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .right-container{
+            height: 700px;
+            width: 595px;
+            background-color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-sizing: border-box;
+            padding-top: 25px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .left-redText{
+            color: red;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .right-redText{
+            color: red;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[name="button"]{
+            cursor: pointer;
+            height: 45px;
+            width: 90px;
+            border-radius: 10px;
+            background-color: rgb(50, 50, 50);
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .checkBox{
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            border: 1px solid black;
+        }
+
+        .pEl{
+            font-size: 20px;
+            font-weight: 400;
+            color: black;
+            margin-left: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .divka{
+            width: 200px;
+            height: 25px;
+            margin-top: 7px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        .atten, .atten2{
+            display: none;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            height: 100px;
+            width: 800px;
+            border-radius: 10px;
+            border: 2px solid rgb(201, 107, 107);
+            background-color: rgb(250, 184, 149);
+        }
+
+        .text1{
+            font-size: 25px;
+            font-weight: 600;
+            margin-left: 15px;
+            margin-top: 15px;
+            color: rgb(214, 81, 81);
+        }
+
+        .text2{
+            font-size: 20px;
+            font-weight: 400;
+            margin-left: 15px;
+            margin-top: 15px;
+            color: rgb(99, 38, 38); 
+        }
+
+        .imgg, .imgg2{
+            cursor: pointer;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-image: url("icons8-кнопка-с-крестиком-48.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="planshet"></div>
+
+    <div class="container">
+        <div class="left-container">
+            <p class="left-redText" id="tet">Список завдань</p>
+
+        </div>
+
+        <div class="right-container">
+            <p class="right-redText">Додати нове завдання</p>
+            <input type="text" name="text">
+            <input type="button" value="додати" name="button">
+        </div>
+
+        <div class="atten">
+            <p class="text1"> Попередження!</p>
+            <p class="text2">Останній таск зі списку Ви не можете видалити</p>
+            <div class="imgg"></div>
+        </div>
+
+        <div class="atten2">
+            <p class="text1">Попередження!</p>
+            <p class="text2">Не можна додати таск без слів!</p>
+            <div class="imgg2"></div>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
